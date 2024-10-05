@@ -265,7 +265,7 @@ import (
 )
 
 func main() {
-        e := echo.New()
+    e := echo.New()
 
 	mon := asynqmon.New(asynqmon.Options{
 		RootPath: "/monitoring/tasks",
