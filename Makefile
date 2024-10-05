@@ -24,10 +24,10 @@ docker:
 
 build-image:
 	docker build \
-		-t docker.io/platacard/asynqmon:$(or $(TAG),latest) .
+		-t docker.io/AsynqLab/asynqmon:$(or $(TAG),latest) .
 
 push-image:
 	docker buildx build \
 		--platform linux/amd64,linux/arm64 \
 		--push \
-		-t docker.io/platacard/asynqmon:$(or $(TAG),latest) .
+		-t docker.io/AsynqLab/asynqmon:$(or $(TAG),latest) .

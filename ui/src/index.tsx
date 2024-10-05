@@ -1,13 +1,13 @@
+import CssBaseline from "@material-ui/core/CssBaseline";
 import React from "react";
 import ReactDOM from "react-dom";
-import CssBaseline from "@material-ui/core/CssBaseline";
 import { Provider } from "react-redux";
 import App from "./App";
-import store from "./store";
-import parseFlagsUnderWindow from "./parseFlags";
-import * as serviceWorker from "./serviceWorker";
 import { saveState } from "./localStorage";
+import parseFlagsUnderWindow from "./parseFlags";
 import { SettingsState } from "./reducers/settingsReducer";
+import * as serviceWorker from "./serviceWorker";
+import store from "./store";
 
 parseFlagsUnderWindow();
 
@@ -35,5 +35,5 @@ ReactDOM.render(
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
-// TODO(hibiken): Look into this.
+// TODO(AsynqLab): Look into this.
 serviceWorker.unregister();
