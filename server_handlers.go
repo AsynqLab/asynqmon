@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/platacard/asynq"
+	"github.com/AsynqLab/asynq"
 )
 
 // ****************************************************************************

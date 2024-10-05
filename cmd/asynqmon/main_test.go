@@ -8,7 +8,7 @@ import (
 	"github.com/google/go-cmp/cmp"
 	"github.com/google/go-cmp/cmp/cmpopts"
 
-	"github.com/platacard/asynq"
+	"github.com/AsynqLab/asynq"
 )
 
 func TestParseFlags(t *testing.T) {
@@ -54,11 +54,10 @@ func TestParseFlags(t *testing.T) {
 			}
 		})
 	}
-
 }
 
 func TestMakeRedisConnOpt(t *testing.T) {
-	var tests = []struct {
+	tests := []struct {
 		desc string
 		cfg  *Config
 		want asynq.RedisConnOpt
@@ -106,7 +105,8 @@ func TestMakeRedisConnOpt(t *testing.T) {
 			want: asynq.RedisFailoverClientOpt{
 				MasterName: "mymaster",
 				SentinelAddrs: []string{
-					"localhost:5000", "localhost:5001", "localhost:5002"},
+					"localhost:5000", "localhost:5001", "localhost:5002",
+				},
 				SentinelPassword: "secretpassword",
 			},
 		},
@@ -117,18 +117,20 @@ func TestMakeRedisConnOpt(t *testing.T) {
 			},
 			want: asynq.RedisClusterClientOpt{
 				Addrs: []string{
-					"localhost:5000", "localhost:5001", "localhost:5002", "localhost:5003", "localhost:5004", "localhost:5005"},
+					"localhost:5000", "localhost:5001", "localhost:5002", "localhost:5003", "localhost:5004", "localhost:5005",
+				},
 			},
 		},
 		{
 			desc: "With cluster nodes array",
 			cfg: &Config{
-				RedisClusterNodes: `["localhost:5000", "localhost:5001", "localhost:5002", 
+				RedisClusterNodes: `["localhost:5000", "localhost:5001", "localhost:5002",
 "localhost:5003", "localhost:5004", "localhost:5005"]`,
 			},
 			want: asynq.RedisClusterClientOpt{
 				Addrs: []string{
-					"localhost:5000", "localhost:5001", "localhost:5002", "localhost:5003", "localhost:5004", "localhost:5005"},
+					"localhost:5000", "localhost:5001", "localhost:5002", "localhost:5003", "localhost:5004", "localhost:5005",
+				},
 			},
 		},
 	}

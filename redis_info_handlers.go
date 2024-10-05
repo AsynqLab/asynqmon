@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/platacard/asynq"
+	"github.com/AsynqLab/asynq"
 	"github.com/redis/go-redis/v9"
 )
 
@@ -118,5 +118,4 @@ func parseRedisInfo(infoStr string) map[string]string {
 		}
 	}
 	return info
-
 }

@@ -16,9 +16,9 @@ import (
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 	"github.com/rs/cors"
 
-	"github.com/platacard/asynq"
-	"github.com/platacard/asynq/x/metrics"
-	"github.com/platacard/asynqmon"
+	"github.com/AsynqLab/asynq"
+	"github.com/AsynqLab/asynqmon"
+	"github.com/AsynqLab/extra/metrics"
 )
 
 // Config holds configurations for the program provided via the command line.
@@ -172,7 +172,8 @@ func main() {
 	}
 
 	if cfg.GlobalRedisPrefix != "" {
-		asynq.SetGlobalPrefix(cfg.GlobalRedisPrefix)
+		// TODO: Implement asynq.SetGlobalPrefix
+		panic("asynq.SetGlobalPrefix is not implemented")
 	}
 
 	redisConnOpt, err := makeRedisConnOpt(cfg)

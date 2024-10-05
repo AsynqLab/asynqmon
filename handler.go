@@ -9,7 +9,7 @@ import (
 	"github.com/gorilla/mux"
 	"github.com/redis/go-redis/v9"
 
-	"github.com/platacard/asynq"
+	"github.com/AsynqLab/asynq"
 )
 
 // Options is used to configure HTTPHandler.

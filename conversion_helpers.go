@@ -5,7 +5,7 @@ import (
 	"unicode"
 	"unicode/utf8"
 
-	"github.com/platacard/asynq"
+	"github.com/AsynqLab/asynq"
 )
 
 // ****************************************************************************

@@ -9,15 +9,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.7.0] - 2022-04-11
 
-Version 0.7 added support for [Task Aggregation](https://github.com/platacard/asynq/wiki/Task-aggregation) feature
+Version 0.7 added support for [Task Aggregation](https://github.com/AsynqLab/asynq/wiki/Task-aggregation) feature
 
 ### Added
- 
+
 - (ui): Added tasks view to show aggregated tasks
 
 ## [0.6.1] - 2022-03-17
 
 ### Fixed
+
 - (ui): Show metrics link in sidebar when --prometheus-addr flag is provided
 
 ## [0.6.0] - 2022-03-02
@@ -32,6 +33,7 @@ Version 0.7 added support for [Task Aggregation](https://github.com/platacard/as
 - (ui): Use logo image in the appbar (thank you @koddr!)
 
 ### Fixed
+
 - (ui): Pagination in ActiveTasks table is fixed
 
 ## [0.5.0] - 2021-12-19
